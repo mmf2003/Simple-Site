@@ -17,7 +17,7 @@
 .nav_list {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 50px;
     padding: 0;
     margin: 0;
 }
@@ -25,9 +25,22 @@
 .nav_link {
     text-decoration: none;
     font-family: Roboto;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
     color: #000000;
+    font-family: Roboto;
+    letter-spacing: 10%;
+}
+
+
+.nav_link:hover {
+    font-weight: 500;
+    color: #34547A;
+    background-color: #c9d1db;
+}
+
+.main {
+    padding-bottom: 141px;
 }
 
 .main_title {
@@ -39,10 +52,23 @@
 }
 
 .main_descr {
+    margin-top: 60px;
     width: 540px;
     font-family: Roboto;
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
     color: #727272;
+}
+
+.main_btn {
+    width: 225px;
+    height: 65px;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+    background-color: #34547A;
+    margin-top: 65px;
+    pointer-events: auto;
 }
