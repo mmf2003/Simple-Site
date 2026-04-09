@@ -78,6 +78,40 @@
     background-color: white;
 }
 
+.about_me {
+    background-color: #F9F9F9;
+    padding-top: 112px;
+}
+
+.about_me_cover {
+    width: 540px;
+}
+
+.about_me-title {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.about_me-descr {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 164%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #727272;
+    margin-bottom: 100px;
+
+}
+
+.projects {
+    padding: 100px 0;
+}
 .projects_cover {
     display: flex;
     justify-content: space-between;
