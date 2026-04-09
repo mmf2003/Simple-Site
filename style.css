@@ -72,3 +72,52 @@
     margin-top: 65px;
     pointer-events: auto;
 }
+
+.main_btn:hover {
+    color: #34547A;
+    background-color: white;
+}
+
+.projects_cover {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project_item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.project_icon {
+    width: 50px;
+    height: 50px;
+}
+
+.project_descr {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 164%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+
+}
+
+.project_number {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.project_name {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 164%;
+    letter-spacing: 0%;
+
+}
