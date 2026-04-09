@@ -105,7 +105,7 @@
     letter-spacing: 0%;
     text-align: center;
     color: #727272;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
 
 }
 
@@ -154,4 +154,55 @@
     line-height: 164%;
     letter-spacing: 0%;
 
+}
+
+
+.footer {
+    background-color: #34547A;
+    margin-bottom: 50px;
+}
+
+.footer_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.my_info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 0;
+}
+
+.my_name h3{
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    padding: 0;
+    margin: 0;
+}
+
+.my_email, .my_tel, .my_name{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.my_email:hover, .my_tel:hover, .my_name:hover h3{
+    color: #727272;
+}
+
+.fa-brands {
+  font-size: 8rem;
+  color: #727272;
+}
+
+.links_cover {
+    display: flex;
+    gap: 130px;
+}
+.fa-brands:hover {
+    color: white;
 }
