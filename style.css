@@ -211,6 +211,7 @@ button {
 
 .how_i_work {
     background-color: #EEEFF1;
+    padding-bottom: 100px;
 }
 
 .how_i_work-title {
@@ -226,10 +227,47 @@ button {
     padding-bottom: 50px;
 }
 
+/* кнопка для видео начало */
+
+.video-box {
+    position: relative;
+    width: 1120px;
+}
+
+video {
+    width: 100%;
+    display: block;
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+
+    font-size: 30px;
+    cursor: pointer;
+
+    background: #727272;
+    color: white;
+
+    transition: 0.3s;
+}
+
+.play-btn:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* кнопка для видео конец */
+
 
 .footer {
     background-color: #34547A;
-    margin-bottom: 50px;
 }
 
 .footer_container {
