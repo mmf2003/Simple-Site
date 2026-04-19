@@ -1,26 +1,44 @@
 const track = document.getElementById('track');
-const slides = Array.from(track.children);
+const originalSlides = Array.from(track.children);
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
+const slider = document.getElementById('slider');
 
-const visible = 3;
+let visible = getVisibleSlides();
 let index = visible;
 
-// клонируем
-const firstClones = slides.slice(0, visible).map(el => el.cloneNode(true));
-const lastClones = slides.slice(-visible).map(el => el.cloneNode(true));
+function getVisibleSlides() {
+  return window.innerWidth <= 792 ? 1 : 3;
+}
 
-lastClones.forEach(el => track.prepend(el));
-firstClones.forEach(el => track.append(el));
+function buildSlider() {
+  visible = getVisibleSlides();
+  index = visible;
 
-const allSlides = Array.from(track.children);
+  track.innerHTML = '';
+
+  const firstClones = originalSlides.slice(0, visible).map(el => el.cloneNode(true));
+  const lastClones = originalSlides.slice(-visible).map(el => el.cloneNode(true));
+
+  lastClones.forEach(el => track.appendChild(el.cloneNode(true)));
+  originalSlides.forEach(el => track.appendChild(el.cloneNode(true)));
+  firstClones.forEach(el => track.appendChild(el.cloneNode(true)));
+
+  update();
+}
+
+function getAllSlides() {
+  return Array.from(track.children);
+}
 
 function update() {
-  const slider = document.getElementById('slider');
   const width = slider.offsetWidth / visible;
+  const allSlides = getAllSlides();
 
   allSlides.forEach(slide => {
     slide.style.minWidth = width + 'px';
+    slide.style.maxWidth = width + 'px';
+    slide.style.flex = `0 0 ${width}px`;
   });
 
   track.style.transition = 'none';
@@ -28,9 +46,7 @@ function update() {
 }
 
 function move() {
-  const slider = document.getElementById('slider');
   const width = slider.offsetWidth / visible;
-
   track.style.transition = 'transform 0.4s ease';
   track.style.transform = `translateX(-${index * width}px)`;
 }
@@ -46,10 +62,10 @@ prevBtn.onclick = () => {
 };
 
 track.addEventListener('transitionend', () => {
-  const slider = document.getElementById('slider');
   const width = slider.offsetWidth / visible;
+  const totalSlides = originalSlides.length;
 
-  if (index >= slides.length + visible) {
+  if (index >= totalSlides + visible) {
     track.style.transition = 'none';
     index = visible;
     track.style.transform = `translateX(-${index * width}px)`;
@@ -57,19 +73,21 @@ track.addEventListener('transitionend', () => {
 
   if (index <= 0) {
     track.style.transition = 'none';
-    index = slides.length;
+    index = totalSlides;
     track.style.transform = `translateX(-${index * width}px)`;
   }
 });
 
-window.addEventListener('resize', update);
+window.addEventListener('resize', () => {
+  buildSlider();
+});
 
-update();
+buildSlider();
 
 const video = document.getElementById('video');
 const btn = document.getElementById('playBtn');
 
 btn.addEventListener('click', () => {
   video.play();
-  btn.style.display = 'none'; // скрыть кнопку
+  btn.style.display = 'none';
 });
