@@ -1,3 +1,7 @@
+* * {
+    box-sizing: border-box;
+}
+
 .header {
     background-color: #EEEFF1;
 }
@@ -159,7 +163,6 @@
 .slide {
     flex: 0 0 33.333%;
     height: 120px;
-    background: #3f5f87;
     color: white;
     display: flex;
     align-items: center;
@@ -365,8 +368,99 @@ video {
     }
 }
 
-@media (max-width: 788px) {
+@media (max-width: 792px) {
+
     .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .nav_list {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .nav_list {
+        border: 2px solid black;
+    }
+
+    .nav_item {
+        background: #c9d1db;
         width: 100%;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .main_title {
+        text-align: center;
+        font-size: 30px;
+    }
+
+
+    .main_descr {
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .main_btn {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 14px;
+        width: 180px;
+        height: 50px;
+    }
+
+    .about_me,
+    .projects {
+        padding: 25px 0;
+    }
+
+    .about_me-title, .how_i_work-title {
+        font-size: 25px;
+    }
+
+    .about_me-descr, .how_i_work-descr {
+        font-size: 14px;
+        padding-top: 25px;
+    }
+
+    .how_i_work-title {
+        padding-bottom: 0;
+    }
+
+    .slider {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .slide {
+        flex: 0 0 100%;
+        height: 120px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+    }
+
+    button {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+
+
+
+    .footer_container {
+        flex-direction: column;
+    }
+
+    .links_cover  {
+        gap: 20px;
     }
 }
