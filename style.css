@@ -303,8 +303,8 @@ video {
 }
 
 .fa-brands {
-  font-size: 8rem;
-  color: #727272;
+    font-size: 8rem;
+    color: #727272;
 }
 
 .links_cover {
@@ -313,4 +313,60 @@ video {
 }
 .fa-brands:hover {
     color: white;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 768px;
+    }
+
+    .nav {
+        padding-bottom: 80px;
+        padding-top: 35px;
+    }
+
+    .main {
+        padding-bottom: 50px;
+    }
+
+    .main_descr,
+    .main_btn {
+        margin-top: 30px;
+    }
+
+    .about_me,
+    .projects {
+        padding: 50px 0;
+    }
+
+    .how_i_work-title {
+        padding-top: 50px;
+    }
+
+    .how_i_work {
+        padding-bottom: 50px;
+    }
+
+    .my_info {
+        padding: 25px 0;
+    }
+
+    .links_cover {
+        gap: 65px;
+    }
+    .fa-brands {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 788px) {
+    .container {
+        width: 100%;
+    }
 }
