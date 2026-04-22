@@ -1,0 +1,306 @@
+/* @media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 768px;
+    }
+
+    .nav {
+        padding-bottom: 80px;
+        padding-top: 35px;
+    }
+
+    .main {
+        padding-bottom: 50px;
+    }
+
+    .main_descr,
+    .main_btn {
+        margin-top: 30px;
+    }
+
+    .about_me,
+    .projects {
+        padding: 50px 0;
+    }
+
+    .how_i_work-title {
+        padding-top: 50px;
+    }
+
+    .how_i_work {
+        padding-bottom: 50px;
+    }
+
+    .my_info {
+        padding: 25px 0;
+    }
+
+    .links_cover {
+        gap: 65px;
+    }
+    .fa-brands {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 792px) {
+
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .nav_list {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .nav_list {
+        border: 2px solid black;
+    }
+
+    .nav_item {
+        background: #c9d1db;
+        width: 100%;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .main_title {
+        text-align: center;
+        font-size: 30px;
+    }
+
+
+    .main_descr {
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .main_btn {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 14px;
+        width: 180px;
+        height: 50px;
+    }
+
+    .about_me,
+    .projects {
+        padding: 25px 0;
+    }
+
+    .about_me-title, .how_i_work-title {
+        font-size: 25px;
+    }
+
+    .about_me-descr, .how_i_work-descr {
+        font-size: 14px;
+        padding-top: 25px;
+    }
+
+    .how_i_work-title {
+        padding-bottom: 0;
+    }
+
+    .slider {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .slide {
+        flex: 0 0 100%;
+        height: 120px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+    }
+
+    button {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .footer_container {
+        flex-direction: column;
+    }
+
+    .links_cover  {
+        gap: 40px;
+    }
+} */
+
+.container {
+    @include responsive($xl) {
+        max-width: 960px;
+    }
+
+    @include responsive($lg) {
+        max-width: 768px;
+    }
+
+    @include responsive($md) {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+}
+
+.nav {
+    @include responsive($lg) {
+        padding-bottom: 80px;
+        padding-top: 35px;
+    }
+}
+
+.main {
+    @include responsive($lg) {
+        padding-bottom: 50px;
+    }
+
+    &_descr,
+    &_btn {
+        @include responsive($lg) {
+        margin-top: 30px;
+        }
+    }
+}
+
+.about_me,
+.projects {
+    @include responsive($lg) {
+        padding: 50px 0;
+    }
+
+    @include responsive($md) {
+        padding: 25px 0;
+    }
+}
+
+.how_i_work {
+    @include responsive($lg) {
+        padding-bottom: 50px;
+    }
+
+    &-title {
+        @include responsive($lg) {
+        padding-top: 50px;
+        }
+
+        @include responsive($md) {
+        font-size: 25px;
+        padding-bottom: 0;
+        }
+    }
+
+    &-descr {
+        @include responsive($md) {
+        font-size: 14px;
+        padding-top: 25px;
+        }
+    }
+}
+
+.nav_list {
+        @include responsive($md) {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+        border: 2px solid black;
+        }
+    }
+
+    .nav_item {
+        @include responsive($md) {
+        background: #c9d1db;
+        width: 100%;
+        cursor: pointer;
+        text-align: center;
+    }
+}
+
+.main {
+    &_title {
+        @include responsive($md) {
+        text-align: center;
+        font-size: 30px;
+        }
+    }
+
+    &_descr {
+        @include responsive($md) {
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        }
+    }
+
+    &_btn {
+        @include responsive($md) {
+        display: block;
+        margin: 0 auto;
+        font-size: 14px;
+        width: 180px;
+        height: 50px;
+        }
+    }
+}
+
+.slider {
+    @include responsive($md) {
+        padding: 0 10%;
+        }
+    }
+
+    .slide {
+    @include responsive($md) {
+        flex: 0 0 100%;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        }
+    }
+
+button {
+    @include responsive($md) {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        cursor: pointer;
+        }
+    }
+
+    .footer_container {
+        @include responsive($md) {
+            flex-direction: column;
+        }   
+    }
+
+    .links_cover {
+        @include responsive($lg) {
+            gap: 65px;
+    }
+
+    @include responsive($md) {
+            gap: 40px;
+        }
+    }
+
+    .fa-brands {
+        @include responsive($lg) {
+            font-size: 5rem;
+    }
+}

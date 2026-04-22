@@ -16,26 +16,22 @@
   padding-top: 79px;
   padding-bottom: 162px;
 }
-
-.nav_list {
+.nav .nav_list {
   list-style: none;
   display: flex;
   gap: 50px;
   padding: 0;
   margin: 0;
 }
-
-.nav_link {
+.nav .nav_list .nav_item .nav_link {
   text-decoration: none;
   font-family: Roboto;
   font-weight: 400;
   font-size: 16px;
   color: #000000;
-  font-family: Roboto;
   letter-spacing: 10%;
 }
-
-.nav_link:hover {
+.nav .nav_list .nav_item .nav_link:hover {
   font-weight: 500;
   color: #34547A;
   background-color: #c9d1db;
@@ -44,16 +40,14 @@
 .main {
   padding-bottom: 141px;
 }
-
-.main_title {
+.main .main_title {
   margin: 0;
   padding: 0;
   font-family: Roboto;
   font-weight: 500;
   font-size: 48px;
 }
-
-.main_descr {
+.main .main_descr {
   margin-top: 60px;
   width: 540px;
   font-family: Roboto;
@@ -62,8 +56,7 @@
   line-height: 26px;
   color: #727272;
 }
-
-.main_btn {
+.main .main_btn {
   width: 225px;
   height: 65px;
   font-family: Roboto;
@@ -74,8 +67,7 @@
   margin-top: 65px;
   pointer-events: auto;
 }
-
-.main_btn:hover {
+.main .main_btn:hover {
   color: #34547A;
   background-color: white;
 }
@@ -309,6 +301,149 @@ video {
   color: white;
 }
 
+/* @media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 768px;
+    }
+
+    .nav {
+        padding-bottom: 80px;
+        padding-top: 35px;
+    }
+
+    .main {
+        padding-bottom: 50px;
+    }
+
+    .main_descr,
+    .main_btn {
+        margin-top: 30px;
+    }
+
+    .about_me,
+    .projects {
+        padding: 50px 0;
+    }
+
+    .how_i_work-title {
+        padding-top: 50px;
+    }
+
+    .how_i_work {
+        padding-bottom: 50px;
+    }
+
+    .my_info {
+        padding: 25px 0;
+    }
+
+    .links_cover {
+        gap: 65px;
+    }
+    .fa-brands {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 792px) {
+
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .nav_list {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .nav_list {
+        border: 2px solid black;
+    }
+
+    .nav_item {
+        background: #c9d1db;
+        width: 100%;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .main_title {
+        text-align: center;
+        font-size: 30px;
+    }
+
+
+    .main_descr {
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .main_btn {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 14px;
+        width: 180px;
+        height: 50px;
+    }
+
+    .about_me,
+    .projects {
+        padding: 25px 0;
+    }
+
+    .about_me-title, .how_i_work-title {
+        font-size: 25px;
+    }
+
+    .about_me-descr, .how_i_work-descr {
+        font-size: 14px;
+        padding-top: 25px;
+    }
+
+    .how_i_work-title {
+        padding-bottom: 0;
+    }
+
+    .slider {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .slide {
+        flex: 0 0 100%;
+        height: 120px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+    }
+
+    button {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .footer_container {
+        flex-direction: column;
+    }
+
+    .links_cover  {
+        gap: 40px;
+    }
+} */
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
@@ -318,111 +453,155 @@ video {
   .container {
     max-width: 768px;
   }
-  .nav {
-    padding-bottom: 80px;
-    padding-top: 35px;
-  }
-  .main {
-    padding-bottom: 50px;
-  }
-  .main_descr,
-  .main_btn {
-    margin-top: 30px;
-  }
-  .about_me,
-  .projects {
-    padding: 50px 0;
-  }
-  .how_i_work-title {
-    padding-top: 50px;
-  }
-  .how_i_work {
-    padding-bottom: 50px;
-  }
-  .my_info {
-    padding: 25px 0;
-  }
-  .links_cover {
-    gap: 65px;
-  }
-  .fa-brands {
-    font-size: 5rem;
-  }
 }
 @media (max-width: 792px) {
   .container {
     max-width: 100%;
     padding: 0 10px;
   }
+}
+
+@media (max-width: 1024px) {
+  .nav {
+    padding-bottom: 80px;
+    padding-top: 35px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main {
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 1024px) {
+  .main_descr, .main_btn {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about_me,
+  .projects {
+    padding: 50px 0;
+  }
+}
+@media (max-width: 792px) {
+  .about_me,
+  .projects {
+    padding: 25px 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .how_i_work {
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 1024px) {
+  .how_i_work-title {
+    padding-top: 50px;
+  }
+}
+@media (max-width: 792px) {
+  .how_i_work-title {
+    font-size: 25px;
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 792px) {
+  .how_i_work-descr {
+    font-size: 14px;
+    padding-top: 25px;
+  }
+}
+
+@media (max-width: 792px) {
   .nav_list {
     flex-direction: column;
     gap: 25px;
     align-items: center;
-  }
-  .nav_list {
     border: 2px solid black;
   }
+}
+
+@media (max-width: 792px) {
   .nav_item {
     background: #c9d1db;
     width: 100%;
     cursor: pointer;
     text-align: center;
   }
+}
+
+@media (max-width: 792px) {
   .main_title {
     text-align: center;
     font-size: 30px;
   }
+}
+@media (max-width: 792px) {
   .main_descr {
     width: 100%;
     text-align: center;
     font-size: 14px;
   }
+}
+@media (max-width: 792px) {
   .main_btn {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     font-size: 14px;
     width: 180px;
     height: 50px;
   }
-  .about_me,
-  .projects {
-    padding: 25px 0;
-  }
-  .about_me-title, .how_i_work-title {
-    font-size: 25px;
-  }
-  .about_me-descr, .how_i_work-descr {
-    font-size: 14px;
-    padding-top: 25px;
-  }
-  .how_i_work-title {
-    padding-bottom: 0;
-  }
+}
+
+@media (max-width: 792px) {
   .slider {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding: 0 10%;
   }
+}
+
+@media (max-width: 792px) {
   .slide {
     flex: 0 0 100%;
     height: 120px;
-    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 16px;
   }
+}
+
+@media (max-width: 792px) {
   button {
     width: 40px;
     height: 40px;
     font-size: 16px;
     cursor: pointer;
   }
+}
+
+@media (max-width: 792px) {
   .footer_container {
     flex-direction: column;
   }
+}
+
+@media (max-width: 1024px) {
+  .links_cover {
+    gap: 65px;
+  }
+}
+@media (max-width: 792px) {
   .links_cover {
     gap: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .fa-brands {
+    font-size: 5rem;
   }
 }
 
